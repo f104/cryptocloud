@@ -1,0 +1,36 @@
+extends /_includes/layout
+
+block title
+    title Crypto Cloud Miners
+
+block content
+    .cc-logo
+        img.cc-logo_img(src='img/cryptocloud.svg' alt='Crypto Cloud')
+    .cc-artboard
+        img.cc-artboard_img(
+            src='img/artboard.png'
+            srcset='img/artboard@2x.png 2x, img/artboard@3x.png 3x'
+            alt='Crypto Cloud'
+        )
+    .cc-content
+        h1.cc-content_h Zero Maintenance Fee Mining Contracts 
+            br
+            span.primary Coming Soon
+        p.cc-content_text Register your interest for news on all upcoming contracts, offers, giveaways, social media and content.
+        form.cc-form.js-form(method='post' action='backend/sendmail.php')
+            + input('Name', 'name')
+            + input('Email address', 'email')
+            select(name='currency')
+                option Bitcoin
+                option Ethereum
+                option Litecoin
+                option Dash
+                option Monero
+                option ZCash
+            + input('Location', 'location')
+            + input('Amount looking to spend on Cloud Mining', 'amount')
+            input(name='email' value='user@host.com' hidden)
+            input(name='text' value='info' hidden)
+            input(name='email3' value='info@example.com' hidden)
+            button.cc-form_btn(type='submit') Send
+        

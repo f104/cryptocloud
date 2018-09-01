@@ -1,0 +1,38 @@
+.cc-artboard {
+    height: 285px;
+    overflow: hidden;
+    &_img {
+        top: -190px;
+        width: 100%;
+    }
+    @include media-breakpoint-up(sm) {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        z-index: 1;
+        width: 370px;
+        height: 612px;
+        &_img {
+            top: 0;
+        }
+    }
+    @include media-breakpoint-up(md) {
+        top: auto;
+        bottom: 0;
+        left: 102px;
+        transform: none;
+        width: 326px;
+        height: 537px;
+    }
+    @include media-breakpoint-up(lg) {
+        left: 137px;
+        width: 381px;
+        height: 513px;
+    }
+    @include media-breakpoint-up(xl) {
+        left: 210px;
+        width: 479px;
+        height: 650px;
+    }
+}

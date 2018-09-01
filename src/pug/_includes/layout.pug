@@ -1,0 +1,12 @@
+block variables
+doctype html
+html(lang=__.lang, class="no-js")
+    head
+        include head
+    body.cc-body
+        include mixins/svgsprite
+        include mixins/input
+        
+        block content
+
+        include scripts
