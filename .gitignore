@@ -5,3 +5,4 @@ bower_components/
 tmp/
 src/scss/generated
 docs
+dist/backend
