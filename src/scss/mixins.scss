@@ -15,6 +15,13 @@
     padding-left: $gutter / 2;
 }
 
+/*https://stackoverflow.com/questions/18907131/detecting-ie11-using-css-capability-feature-detection*/
+@mixin ie10up() {
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        @content
+    }
+}
+
 // Breakpoint viewport sizes and media queries.
 //
 // Breakpoints are defined as a map of (name: minimum width), order from small to large:
