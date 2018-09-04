@@ -19,10 +19,10 @@ block content
         p.cc-content_text.js-success_hide Register your interest for news on all upcoming contracts, offers, giveaways, social media and content.
         form.cc-form.js-form.js-success_hide(method='post' action='backend/sendmail.php')
             .cc-form_row
-                + input('Name', 'name')
+                + input('Name', 'text', 'name', true)
                 .cc-form_col._spacer
-                + input('Email address', 'email2')
-                + input('Location', 'location')
+                + input('Email address', 'email', 'email2', true)
+                + input('Location', 'text', 'location', true)
                 .cc-form_col
                     span.cc-form_item
                         select.js-select(name='currency')
@@ -33,7 +33,7 @@ block content
                             option Monero
                             option ZCash
                         label Crypto Currency’s of Interest
-                + input('Amount looking to spend', 'amount')
+                + input('Amount looking to spend', 'text', 'amount')
                 input(name='email' value='user@host.com' hidden)
                 input(name='text' value='info' hidden)
                 input(name='email3' value='info@example.com' hidden)

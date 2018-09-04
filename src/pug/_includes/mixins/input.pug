@@ -1,5 +1,9 @@
-mixin input(label, name)
+mixin input(label, type, name, required)
     .cc-form_col
         span.cc-form_item
-            input(name=name required autocomplete='off')
+            input(
+                name=name 
+                type=type 
+                required=required
+                autocomplete='off')
             label= label
