@@ -75,15 +75,13 @@
             @include media-breakpoint-between(md, lg) {
                 font-size: 14px;
             }
-        }
-        input:focus + label, input:valid + label,
-            textarea:focus + label, textarea:valid + label,
-            select ~ label, select:valid + label {
-            font-size: 12px;
-            opacity: .5;
-            transform: translateY(-23px);
-            @include media-breakpoint-up(sm) {
-                font-size: 13px;
+            &._active {
+                font-size: 12px;
+                opacity: .5;
+                transform: translateY(-23px);
+                @include media-breakpoint-up(sm) {
+                    font-size: 13px;
+                }
             }
         }
     }
