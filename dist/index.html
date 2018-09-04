@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Crypto Cloud Miners</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="fonts/Circle/stylesheet.css">
+    <link rel="stylesheet" href="assets/css/main.css?v=1.0.0">
+  </head>
+  <body class="cc-body">
+    <div class="cc-logo"><img class="cc-logo_img" src="img/cryptocloud.svg" alt="Crypto Cloud"></div>
+    <div class="cc-artboard"><img class="cc-artboard_img" src="img/artboard.png" srcset="img/artboard@2x.png 2x, img/artboard@3x.png 3x" alt="Crypto Cloud"></div>
+    <div class="cc-content js-content">
+      <h1 class="cc-content_h">Zero Maintenance Fee Mining Contracts <br><span class="primary">Coming Soon</span></h1>
+      <p class="cc-content_text js-success_hide">Register your interest for news on all upcoming contracts, offers, giveaways, social media and content.</p>
+      <form class="cc-form js-form js-success_hide" method="post" action="backend/sendmail.php">
+        <div class="cc-form_row">
+              <div class="cc-form_col"><span class="cc-form_item">
+                  <input name="name" required autocomplete="off">
+                  <label>Name</label></span></div>
+          <div class="cc-form_col _spacer"></div>
+              <div class="cc-form_col"><span class="cc-form_item">
+                  <input name="email2" required autocomplete="off">
+                  <label>Email address</label></span></div>
+              <div class="cc-form_col"><span class="cc-form_item">
+                  <input name="location" required autocomplete="off">
+                  <label>Location</label></span></div>
+          <div class="cc-form_col"><span class="cc-form_item">
+              <select class="js-select" name="currency">
+                <option>Bitcoin</option>
+                <option>Ethereum</option>
+                <option>Litecoin</option>
+                <option>Dash</option>
+                <option>Monero</option>
+                <option>ZCash</option>
+              </select>
+              <label>Crypto Currency’s of Interest</label></span></div>
+              <div class="cc-form_col"><span class="cc-form_item">
+                  <input name="amount" required autocomplete="off">
+                  <label>Amount looking to spend</label></span></div>
+          <input name="email" value="user@host.com" hidden>
+          <input name="text" value="info" hidden>
+          <input name="email3" value="info@example.com" hidden>
+        </div>
+        <div class="cc-form_footer">
+          <button class="cc-form_btn" type="submit">Send</button>
+        </div>
+      </form>
+      <p class="cc-content_text _success js-success_show">Thanks, <br>your interest was successfully registered.</p>
+    </div>
+    <script src="assets/js/bundle.js?v=1.0.0"></script>
+  </body>
+</html>

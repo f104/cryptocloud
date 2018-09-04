@@ -24,16 +24,13 @@ const form = {
                     },
                     success: function (data) {
                         if (data['success']) {
-                            $('.js-form_inner').fadeOut(function () {
-                                $('.js-form_success').fadeIn();
-                            });
+                            app.form.showMessage();
                         } else if (data['msg']) {
                             console.log(data['msg']);
                         }
                     },
                     complete: function () {
                         $form.find('input, select, button').removeClass('_disabled');
-                        app.form.showMessage();
                     }
                 });
                 return false;
