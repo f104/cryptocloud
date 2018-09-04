@@ -7,9 +7,8 @@
     }
     @include media-breakpoint-up(sm) {
         position: absolute;
-        top: 50%;
+        top: 144px;
         left: 0;
-        transform: translateY(-50%);
         z-index: 1;
         width: 370px;
         height: 612px;
@@ -18,19 +17,19 @@
         }
     }
     @include media-breakpoint-up(md) {
-        top: auto;
-        bottom: 0;
+        top: 113px;
         left: 102px;
-        transform: none;
         width: 326px;
         height: 537px;
     }
     @include media-breakpoint-up(lg) {
+        top: 117px;
         left: 137px;
         width: 381px;
         height: 513px;
     }
     @include media-breakpoint-up(xl) {
+        top: 150px;
         left: 210px;
         width: 479px;
         height: 650px;

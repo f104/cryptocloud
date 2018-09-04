@@ -1,61 +1,66 @@
 .cc-content {
+    $root: &;
     flex-grow: 1;
-    background-color: #1f1f98;
-    background-image: url(../../img/bg.svg);
-    background-size: cover;
-    padding-top: 27px;
+    background-image: 
+        radial-gradient(circle at 18% 88%, #1f1f98, rgba(24, 74, 240, 0)), 
+        radial-gradient(circle at 76% -36%, #d3076d, #184af0);
+    padding-top: 38px;
     padding-bottom: 53px;
     padding-left: 35px;
+    transition: padding .4s ease-in-out;
     @include media-breakpoint-up(sm) {
         margin-left: 226px;
-        padding-top: 54px;
+        padding-top: 65px;
         padding-bottom: 62px;
         padding-left: 201px;
     }
     @include media-breakpoint-up(md) {
         margin-left: 305px;
-        padding-top: 64px;
-        padding-bottom: 62px;
+        padding-top: 80px;
+        padding-bottom: 58px;
         padding-left: 186px;
     }
     @include media-breakpoint-up(lg) {
         margin-left: 371px;
-        padding-top: 57px;
-        padding-bottom: 62px;
+        padding-top: 77px;
+        padding-bottom: 49px;
         padding-left: 232px;
     }
     @include media-breakpoint-up(xl) {
         margin-left: 462px;
-        padding-top: 65px;
+        padding-top: 92px;
         padding-left: 355px;
-        padding-bottom: 62px;
+        padding-bottom: 99px;
     }
     &_h {
+        top: 0;
         font-size: 28px;
         font-weight: 800;
         line-height: 1.36;
         letter-spacing: 0.7px;
-        width: 222px;
-        margin-bottom: 61px;
+        width: 238px;
+        margin-bottom: 57px;
         &:after {
+            transition: top .4s ease-in-out;
             content: '';
             position: absolute;
             background-color: $color-base;
             width: 21px;
             height: 4px;
             left: -35px;
-            top: 28px;
+            top: 17px;
+            z-index: 1;
         }
         @include media-breakpoint-up(sm) {
             font-size: 32px;
             line-height: 1.315;
             letter-spacing: 0.8px;
             width: 301px;
-            margin-bottom: 61px;
+            margin-bottom: 55px;
             &:after {
                 width: 100px;
                 left: -125px;
-                top: 155px;
+                top: 144px;
             }
         }
         @include media-breakpoint-up(md) {
@@ -63,63 +68,106 @@
             line-height: 1.36;
             letter-spacing: 0.7px;
             width: 315px;
-            margin-bottom: 59px;
+            margin-bottom: 48px;
             &:after {
-                left: -128px;
-                top: 106px;
+                left: -129px;
+                top: 95px;
             }
         }
         @include media-breakpoint-up(lg) {
             font-size: 32px;
             line-height: 1.31;
             letter-spacing: 0.8px;
-            margin-bottom: 55px;
+            width: 335px;
+            margin-bottom: 47px;
             &:after {
                 width: 115px;
                 left: -134px;
-                top: 114px;
+                top: 104px;
             }
         }
         @include media-breakpoint-up(xl) {
-            font-size: 42px;
-            line-height: 1.24;
-            letter-spacing: 1px;
+            font-size: 40px;
+            line-height: 1.3;
+            letter-spacing: .9px;
             width: 420px;
-            margin-bottom: 84px;
+            margin-bottom: 69px;
             &:after {
                 width: 151px;
                 height: 5px;
                 left: -176px;
-                top: 138px;
+                top: 127px;
             }
         }
     }
     &_text {
         font-size: 16px;
-        line-height: 1.5;
+        line-height: 1.6;
         letter-spacing: 0.2px;
         width: 206px;
         margin-bottom: 50px;
         @include media-breakpoint-up(sm) {
             font-size: 14px;
             letter-spacing: 0.2px;
-            line-height: 1.45;
-            width: 269px;
-            margin-bottom: 61px;
+            width: 260px;
+            margin-bottom: 45px;
         }
         @include media-breakpoint-up(md) {
             width: 381px;
-            margin-bottom: 61px;
+            margin-bottom: 46px;
         }
         @include media-breakpoint-up(lg) {
-            margin-bottom: 61px;
+            width: 340px;
+            margin-bottom: 31px;
         }
         @include media-breakpoint-up(xl) {
-            font-size: 18px;
-            letter-spacing: 0.3px;
-            line-height: 1.5;
+            font-size: 16px;
+            line-height: 1.56;
+            letter-spacing: 0.2px;
             width: 431px;
-            margin-bottom: 61px;
+            margin-bottom: 45px;
+        }
+        &._success {
+            display: none;
+        }
+    }
+    &._success {
+        @include media-breakpoint-up(sm) {
+            padding-top: 312px;
+        }
+        @include media-breakpoint-up(md) {
+            padding-top: 238px;
+        }
+        @include media-breakpoint-up(lg) {
+            padding-top: 222px;
+        }
+        @include media-breakpoint-up(xl) {
+            padding-top: 277px;
+        }
+        #{$root}_h {
+            @include media-breakpoint-up(md) {
+                margin-bottom: 35px;
+            }
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 39px;
+            }
+            @include media-breakpoint-up(xl) {
+                margin-bottom: 45px;
+            }
+            &:after {
+                @include media-breakpoint-up(sm) {
+                    top: 61px;
+                }
+                @include media-breakpoint-up(md) {
+                    top: 54px;
+                }
+                @include media-breakpoint-up(lg) {
+                    top: 61px;
+                }
+                @include media-breakpoint-up(xl) {
+                    top: 74px;
+                }
+            }
         }
     }
 }

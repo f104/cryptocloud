@@ -12,25 +12,33 @@ block content
             srcset='img/artboard@2x.png 2x, img/artboard@3x.png 3x'
             alt='Crypto Cloud'
         )
-    .cc-content
+    .cc-content.js-content
         h1.cc-content_h Zero Maintenance Fee Mining Contracts 
             br
             span.primary Coming Soon
-        p.cc-content_text Register your interest for news on all upcoming contracts, offers, giveaways, social media and content.
-        form.cc-form.js-form(method='post' action='backend/sendmail.php')
-            + input('Name', 'name')
-            + input('Email address', 'email')
-            select(name='currency')
-                option Bitcoin
-                option Ethereum
-                option Litecoin
-                option Dash
-                option Monero
-                option ZCash
-            + input('Location', 'location')
-            + input('Amount looking to spend on Cloud Mining', 'amount')
-            input(name='email' value='user@host.com' hidden)
-            input(name='text' value='info' hidden)
-            input(name='email3' value='info@example.com' hidden)
-            button.cc-form_btn(type='submit') Send
-        
+        p.cc-content_text.js-success_hide Register your interest for news on all upcoming contracts, offers, giveaways, social media and content.
+        form.cc-form.js-form.js-success_hide(method='post' action='backend/sendmail.php')
+            .cc-form_row
+                + input('Name', 'name')
+                .cc-form_col._spacer
+                + input('Email address', 'email2')
+                + input('Location', 'location')
+                .cc-form_col
+                    span.cc-form_item
+                        select.js-select(name='currency')
+                            option Bitcoin
+                            option Ethereum
+                            option Litecoin
+                            option Dash
+                            option Monero
+                            option ZCash
+                        label Crypto Currency’s of Interest
+                + input('Amount looking to spend', 'amount')
+                input(name='email' value='user@host.com' hidden)
+                input(name='text' value='info' hidden)
+                input(name='email3' value='info@example.com' hidden)
+            .cc-form_footer
+                button.cc-form_btn(type='submit') Send
+        p.cc-content_text._success.js-success_show Thanks, 
+            br
+            | your interest was successfully registered.

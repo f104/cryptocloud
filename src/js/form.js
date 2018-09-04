@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import 'select2';
 
 const form = {
     init: function () {
@@ -10,7 +11,7 @@ const form = {
         }
 
         app.document.ready(function () {
-
+            app.form.initSelect();
             $form.submit(function () {
                 var data = $form.serialize();
                 $.ajax({
@@ -32,12 +33,30 @@ const form = {
                     },
                     complete: function () {
                         $form.find('input, select, button').removeClass('_disabled');
+                        app.form.showMessage();
                     }
                 });
                 return false;
             });
         });
 
+        app.window.on('resize', function () {
+            app.form.initSelect();
+        });
+
+    },
+
+    showMessage: function () {
+        $('.js-success_hide').fadeOut(function() {
+            $('.js-content').addClass('_success');
+            $('.js-success_show').fadeIn();
+        });
+    },
+
+    initSelect: function () {
+        $('.js-select').select2({
+            dropdownPosition: 'below'
+        });
     }
 };
 
